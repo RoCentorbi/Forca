@@ -1,0 +1,26 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos filhos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    background-color: #c9c2c2; /* Cor de fundo opcional */
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px; /* Ajuste conforme necessário */
+}
+
+/* Estilos adicionais para elementos específicos, se necessário */
+input, button {
+    margin: 5px 0; /* Espaçamento vertical para inputs e botões */
+}
+
+.palavra {
+    font-size: 30px; /* Ajuste o tamanho conforme necessário */
+    font-weight: bold;
+    /* Outros estilos conforme necessário */
+}

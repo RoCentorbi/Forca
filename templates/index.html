@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+<body>
+    <h1>Jogo da Forca</h1>
+    <img src="{{ url_for('static', filename='images/forca' + session.get('forca_estado', 0)|string + '.png') }}" alt="Estado da Forca" height="250px"; width="180px">
+    <div>Dica: {{ session['dica'] }}</div>
+    <div>Tentativas restantes: {{ session['tentativas'] }}</div>
+    <div>Letras erradas: {{ ' '.join(session['letras_erradas']) }}</div> </br>
+    <div class="palavra">{{ ' '.join(session['palavra_display']) }}</div> <!--Letras certas--></br>
+       <form action="/" method="POST">
+        <input type="text" name="letra" maxlength="1" required>
+        <button type="submit">Enviar</button>
+    </form>
+    <form action="/reiniciar" method="POST">
+        <button type="submit">Reiniciar Jogo</button>
+    </form>
+</body>
+</html>

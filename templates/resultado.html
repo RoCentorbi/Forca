@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado do Jogo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        {% if venceu %}
+            <h1>Parabéns! Você venceu!</h1>
+        {% else %}
+            <h1>Que pena! Você perdeu!</h1>
+            <p>A palavra correta era: {{ session['palavra_secreta'] }}</p>
+        {% endif %}
+        <form action="/reiniciar" method="POST">
+            <button type="submit">Jogar Novamente</button>
+        </form>
+    </div>
+</body>
+</html>

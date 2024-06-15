@@ -1,0 +1,1 @@
+// Este arquivo pode conter código JavaScript para animações ou lógicas adicionais.
